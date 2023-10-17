@@ -16,3 +16,12 @@ conda install pytorch torchvision torchaudio -c pytorch -c nvidia -y
 ```
 conda env create -f environment.yml
 ```
+
+## To see if `pytorch` can access cuda
+
+```{python}
+import torch
+
+torch.cuda.is_available()
+#returns `True` if cuda is present and `False` if only CPU
+```
